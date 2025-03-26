@@ -1,4 +1,4 @@
-package org.lqs1848.crack.allatori;
+package org.allatori;
 
 import java.io.DataInputStream;
 import java.io.File;
@@ -44,7 +44,7 @@ public class Main {
 		// 还有 allatori.jar 不引入这个的话 fMethod.getReturnType() 会 ClassNotFind
 		
 		//把随机名称的类导入到 javassist
-		pool.importPackage("org.lqs1848.crack.allatori.RandomName");
+		pool.importPackage("org.allatori.RandomName");
 		
 		execute();
 	}// method main
@@ -82,6 +82,7 @@ public class Main {
 					
 					if(!cl.getName().startsWith("com.allatori.eclipse")) {
 						for (CtMethod fMethod : cl.getMethods()) {
+							System.out.println(fMethod.getName());
 							if(!fMethod.isEmpty() && "String".equals(fMethod.getReturnType().getSimpleName()) 
 									&& cl.getName().equals(fMethod.getDeclaringClass().getName()) 
 									) {

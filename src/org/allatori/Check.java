@@ -1,4 +1,4 @@
-package org.lqs1848.crack.allatori;
+package org.allatori;
 
 import java.io.DataInputStream;
 import java.util.Enumeration;
