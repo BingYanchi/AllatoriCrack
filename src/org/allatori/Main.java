@@ -82,7 +82,6 @@ public class Main {
 					
 					if(!cl.getName().startsWith("com.allatori.eclipse")) {
 						for (CtMethod fMethod : cl.getMethods()) {
-							System.out.println(fMethod.getName());
 							if(!fMethod.isEmpty() && "String".equals(fMethod.getReturnType().getSimpleName()) 
 									&& cl.getName().equals(fMethod.getDeclaringClass().getName()) 
 									) {
